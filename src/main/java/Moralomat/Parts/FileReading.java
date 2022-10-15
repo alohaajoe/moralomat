@@ -1,4 +1,4 @@
-package Parts;
+package Moralomat.Parts;
 
 import java.io.*;
 import java.util.ArrayList;

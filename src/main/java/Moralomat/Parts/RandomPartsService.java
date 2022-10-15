@@ -1,4 +1,7 @@
-package Parts;
+package Moralomat.Parts;
+
+import Moralomat.Parts.FileReading;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 import java.util.Random;
@@ -17,6 +20,7 @@ public class RandomPartsService {
         lastParts = FileReading.readFile(filePathLastPart);
     }
 
+    @GetMapping("/moral")
     public static String getRandomSentence(){
         String firstPart = getRandomLineFromList(firstParts);
         String middlePart = getRandomLineFromList(middleParts);

@@ -1,5 +1,6 @@
+package Moralomat;
 
-import Parts.RandomPartsService;
+import Moralomat.Parts.RandomPartsService;
 
 
 public class App {
