@@ -1,12 +1,12 @@
 package Moralomat.Parts;
 
-import Moralomat.Parts.FileReading;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Random;
 
-
+@RestController
 public class RandomPartsService {
 
     private static List<String> firstParts;
@@ -14,7 +14,7 @@ public class RandomPartsService {
     private static List<String> lastParts;
 
 
-    public RandomPartsService(String filePathFirstPart, String filePathMiddlePart, String filePathLastPart){
+    public static void setup(String filePathFirstPart, String filePathMiddlePart, String filePathLastPart){
         firstParts = FileReading.readFile(filePathFirstPart);
         middleParts = FileReading.readFile(filePathMiddlePart);
         lastParts = FileReading.readFile(filePathLastPart);

@@ -10,8 +10,8 @@ public class App {
 
 
     public static void main(String[] args) {
-        RandomPartsService randomPartsService = new RandomPartsService(filePathFirstPart, filePathMiddlePart, filePathLastPart);
-        System.out.println( randomPartsService.getRandomSentence());
+        RandomPartsService.setup(filePathFirstPart, filePathMiddlePart, filePathLastPart);
+        System.out.println( RandomPartsService.getRandomSentence());
 
     }
 }
