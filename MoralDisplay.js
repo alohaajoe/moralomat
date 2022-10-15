@@ -1,4 +1,6 @@
-let url = '/getRandomSentence';
+/// <reference path="../../TSDef/p5.global-mode.d.ts" />
+
+let url = '/moral';
 let canvas;
 
 
@@ -29,20 +31,17 @@ function draw() {
 
 }
 
-function gotData(data){
-
-}
 
 function createNewMoral(){
     loadJSON(url, displayNewMoral);
 }
 
-function displayNewMoral(){
+function displayNewMoral(data){
+    print(data);
 
 }
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
-    gif_createImg.size(windowWidth, windowHeight);
 }
 
