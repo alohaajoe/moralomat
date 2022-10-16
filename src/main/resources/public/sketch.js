@@ -1,6 +1,6 @@
 /// <reference path="../../TSDef/p5.global-mode.d.ts" />
 
-let url = 'http://localhost:8080/moral';
+let url = 'moral';
 let canvas;
 
 
