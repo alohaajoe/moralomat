@@ -59,5 +59,6 @@ function displayNewMoral(){
 
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
+    button.position(width/2 - button.width/2 , height/2);
 }
 
