@@ -1,6 +1,6 @@
 /// <reference path="../../TSDef/p5.global-mode.d.ts" />
 
-let url = '../moral';
+let url = '/moral';
 let canvas;
 
 let button;
