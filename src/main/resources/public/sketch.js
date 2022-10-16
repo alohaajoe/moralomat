@@ -3,10 +3,9 @@
 let url = 'moral';
 let canvas;
 
-
 let button;
 let moralArray;
-let moral;
+let moral = "Moral";
 
 function preload(){
 
@@ -17,31 +16,44 @@ function setup() {
     rectMode(CENTER);
     angleMode(DEGREES);
     imageMode(CENTER);
+    textAlign(CENTER, BOTTOM);
+
 
     canvas = createCanvas(windowWidth,windowHeight);
     canvas.position(0,0);
-    colorMode(RGB);
+    colorMode(HSB, 255,255,255,100);
 
     button = createButton("Neue Moral");
-    button.position(width/2 , height/2);
+    button.position(width/2 - button.width/2 , height/2);
 }
 
 function draw() {
-    background(100,0,255);
+    //drawLittleHelpers();
+    background(40,50,255,50);
     button.mousePressed(createNewMoral);
+    displayNewMoral();
+}
 
+function drawLittleHelpers() {
+    line(0,height/2,width,height/2);
+    line(width/2,0,width/2, height);
 }
 
 
 function createNewMoral(){
-    moralArray = loadJSON(url, displayNewMoral);
+    moralArray = loadJSON(url, gotData);
 }
 
-function displayNewMoral(){
+function gotData(){
     print(moralArray);
     moral = moralArray[0];
     print (moral);
+}
 
+function displayNewMoral(){
+    fill('black');
+    textSize(30);
+    text(moral,width/2,height/2 - 25);
 
 }
 
