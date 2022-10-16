@@ -5,7 +5,8 @@ let canvas;
 
 
 let button;
-
+let moralArray;
+let moral;
 
 function preload(){
 
@@ -28,17 +29,19 @@ function setup() {
 function draw() {
     background(100,0,255);
     button.mousePressed(createNewMoral);
-    fill(255);
-    ellipse(50,50,20,20);
+
 }
 
 
 function createNewMoral(){
-    loadJSON(url, displayNewMoral);
+    moralArray = loadJSON(url, displayNewMoral);
 }
 
-function displayNewMoral(data){
-    print(data);
+function displayNewMoral(){
+    print(moralArray);
+    moral = moralArray[0];
+    print (moral);
+
 
 }
 
