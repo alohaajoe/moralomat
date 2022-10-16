@@ -1,6 +1,6 @@
 /// <reference path="../../TSDef/p5.global-mode.d.ts" />
 
-let url = '/moral';
+let url = 'http://localhost:8080/moral';
 let canvas;
 
 
@@ -26,9 +26,10 @@ function setup() {
 }
 
 function draw() {
-    background(50,0,255);
+    background(100,0,255);
     button.mousePressed(createNewMoral);
-
+    fill(255);
+    ellipse(50,50,20,20);
 }
 
 
