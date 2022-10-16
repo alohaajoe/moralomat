@@ -1,6 +1,6 @@
 /// <reference path="../../TSDef/p5.global-mode.d.ts" />
 
-let url = 'https://alohaajoe.github.io/moralomat/moral';
+let url = '/moral';
 let canvas;
 
 let button;
